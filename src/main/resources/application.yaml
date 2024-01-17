@@ -1,0 +1,24 @@
+spring.datasource.url: jdbc:h2:file:./camunda-h2-database
+
+camunda.bpm.admin-user:
+  id: sai
+  password: sai
+  
+spring.h2.console.enabled: true
+camunda.bpm:
+  admin-user:
+    id: sai
+    password: sai
+    firstName: sai
+    lastName: sai
+  filter:
+    create: All Tasks
+#  default-serialization-format: application/json
+server.port: 8080
+
+spring:
+  application:
+    name: CAMUNDA-SERVICE
+  config:
+    import: optional:configserver:${CONFIG_SERVER_URL:http://localhost:9232}
+  
